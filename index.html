@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #fdf6ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 26px;
+      border-radius: 24px;
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #ff4f8b;
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      background: #ffe3ee;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    button:hover {
+      background: #ffd1e6;
+      transform: scale(1.04);
+    }
+
+    .gif-box {
+      margin-top: 20px;
+    }
+
+    .gif-box img {
+      width: 100%;
+      border-radius: 18px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <button onclick="showGif('yes')">Yesss 😘💗</button>
+    <button onclick="showGif('no')">No 💔🥀</button>
+    <button onclick="showGif('think')">Soch ke bataungi 🤔</button>
+    <button onclick="showGif('pagal')">Hatt pagal 😒</button>
+    <button onclick="showGif('block')">Block 🤬🤬</button>
+
+    <div class="gif-box">
+      <img id="yes" src="https://tenor.com/en-IN/view/om-shanti-om-meme-om-shanti-om-srk-om-shanti-om-shahrukh-khan-falling-shah-rukh-khan-gif-1564110625094239079">
+      <img id="no" src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyb3ZxYXVjZmx5NXlxeGZpaTFwOWZ1aWFwM3BraXo1ZmJ1ZDhvMXEzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ruyS8Zw9sBqE5UjOnY/giphy.gif">
+      <img id="think" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUydWY1MDJxYmtwM2tqMmJtN2Rnd2p0MXVnaHNrNWxrZ3kzcmVwcnp3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pFZTlrO0MV6LoWSDXd/giphy.gif">
+      <img id="pagal" src="https://tenor.com/j5PWlmuhqrQ.gif">
+      <img id="block" src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUydGFqZm1zeDB5eGt1cms4N3d4cHNyNTkxazBiZnZlbnp5ZDlvcWhjZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dI53rvCkTsyJWFA3Fc/giphy.gif">
+    </div>
+  </div>
+
+  <script>
+    function showGif(id) {
+      document.querySelectorAll('.gif-box img').forEach(img => {
+        img.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
